@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/<your-username>/python-api.git'
+                git branch: 'main', url: 'https://github.com/pal24/CognizantInterview.git'
             }
         }
 
