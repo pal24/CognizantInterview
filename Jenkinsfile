@@ -22,7 +22,7 @@ pipeline {
         stage('Test') {
             steps {
                 sh '''
-                podman run --rm $IMAGE_NAME pytest -v
+                /opt/homebrew/bin/podman run --rm $IMAGE_NAME pytest -v
                 '''
             }
         }
@@ -30,8 +30,8 @@ pipeline {
         stage('Deploy') {
             steps {
                 sh '''
-                podman rm -f $CONTAINER_NAME || true
-                podman run -d --name $CONTAINER_NAME -p 5001:5000 $IMAGE_NAME
+                /opt/homebrew/bin/podman rm -f $CONTAINER_NAME || true
+                /opt/homebrew/bin/podman run -d --name $CONTAINER_NAME -p 5001:5000 $IMAGE_NAME
                 '''
             }
         }
