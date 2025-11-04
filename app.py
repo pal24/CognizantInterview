@@ -2,10 +2,10 @@ from flask import Flask, jsonify
 
 app = Flask(__name__)
 
-@app.route('/api/hello', methods=['GET'])
+@app.route('/')
 def hello():
-    return jsonify(message="Hello from CI/CD Pipeline with Python and Podman!")
+    return jsonify(message="Hello from CI/CD Pipeline with Python!")
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+    app.run(host='0.0.0.0', port=5001)
 
