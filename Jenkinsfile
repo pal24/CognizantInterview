@@ -15,7 +15,7 @@ pipeline {
 
         stage('Build') {
             steps {
-                sh 'podman build -t $IMAGE_NAME .'
+                sh '/opt/homebrew/bin/podman build -t $IMAGE_NAME .'
             }
         }
 
